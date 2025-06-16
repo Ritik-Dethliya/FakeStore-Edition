@@ -4,9 +4,14 @@ function FilterDropDown({originalProduct,setshowProduct}) {
     const selectRef=useRef(null)
     const handelSelect=()=>{
         let selectvalue=selectRef.current.value
-        console.log(selectvalue)
+        if(selectvalue=='all'){
+            setapplyPagination(!applyPagination)
+            setshowProduct(originalProduct)
+            return
+        }
         let searchProduct=originalProduct.filter((product)=>product.category.includes(selectRef.current.value))
         setshowProduct(searchProduct)
+       
     }
     return (  
         <>
