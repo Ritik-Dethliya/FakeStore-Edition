@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Search from "../Components/Search";
+import FilterDropDown from "../Components/filter";
+import '../styles/product.css'
 
 function Home() {
     const [showProduct,setshowProduct]=useState(null)
@@ -21,11 +23,12 @@ function Home() {
     return (  
         <>
             <Search originalProduct={originalProduct} setshowProduct={setshowProduct}/>
+            <FilterDropDown originalProduct={originalProduct} setshowProduct={setshowProduct}/>
             <div className="product-container">
                 {showProduct && showProduct.map((product,index)=>{
                     return(
                         <div className="product-card" key={index}>
-                            <img src={product.image} alt='' />
+                            <img src={product.image} alt='' className="image"/>
                             <div className="price">{product.price}</div>
                             <h3>{product.title}</h3>
                             <p className="description">

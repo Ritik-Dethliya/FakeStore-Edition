@@ -24,7 +24,10 @@ function Search({originalProduct,setshowProduct}) {
     }
     return (  
         <>
-            <input type="text" className="search" ref={inputref} onChange={inputDebounce}/>
+            <div className="drop-container">
+                <input type="text" className="search" ref={inputref} onChange={inputDebounce} placeholder="Enter Product Name"/>
+            </div>
+            
         </>
     );
 }

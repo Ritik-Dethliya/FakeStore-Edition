@@ -1,0 +1,31 @@
+.product-container{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 2%;
+}
+.product-card{
+    padding: 5px;
+}
+.image{
+    width: 100%;
+}
+.search{
+    padding: 20px;
+    width: 90%;
+    border: 1px dotted ;
+    font-size: 20px;
+    margin: 10px;
+}
+.selectdropdown{
+    padding: 10px;
+    margin-left: 10px;
+    position: absolute;
+    right: 10%; 
+}
+.drop-container{
+    position: relative;
+    margin-bottom: 10px;
+}
